@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body id="body">
+    <header id="inicioHeader">
+        <nav>
+            <ul id="listLinkNav" class="navbar">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#estudios-cursos">Estudios y Cursos</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 id="h1Hero">Bienvenido a mi portafolio</h1>
+            <p id="pHero">Descubre más sobre mí y mis proyectos.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="content-section">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="section-content">
+                <p>Desarrollador de aplicaciones con 1 año experiencia en C#, MVC, HTML, CSS y SQL Server, graduado de Técnico de Nivel Superior en programación y análisis de sistemas en 2024. en búsqueda de unirme a un equipo donde pueda aportar todas mis habilidades analíticas y mi pasión por aprender nuevas tecnologías según el mercado lo requiera.
+
+                    Después de llevar más de 5 años de experiencia en liderazgo y jefatura, decidí tomar otros rumbos en mi carrera, lo que me apasiona es la tecnología.</p>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="content-section">
+            <h2 class="section-title">Proyectos (API GITHUB) </h2>
+            <div class="section-content">
+                <!-- Aquí se cargarán las cartas de los proyectos dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Estudios y Cursos -->
+        <section id="estudios-cursos" class="content-section">
+            <h2 class="section-title">Estudios y Cursos</h2>
+            <div class="section-content">
+                <div class="course-card">
+                    <h3>Curso de JavaScript Avanzado</h3>
+                    <p>Aprende conceptos avanzados de JavaScript, como closures, asincronía y programación funcional.</p>
+                    <p class="institution">Impartido por: Udemy</p>
+                    <a href="https://www.udemy.com/" target="_blank">Ver certificado</a>
+                </div>
+                <div class="course-card">
+                    <h3>Diseño Responsivo con CSS</h3>
+                    <p>Crea diseños modernos y adaptables para cualquier dispositivo utilizando las últimas técnicas de CSS.</p>
+                    <p class="institution">Impartido por: Coursera</p>
+                    <a href="https://www.coursera.org/" target="_blank">Ver certificado</a>
+                </div>
+                <div class="course-card">
+                    <h3>Introducción a Python</h3>
+                    <p>Domina los fundamentos de Python para aplicaciones de ciencia de datos y desarrollo web.</p>
+                    <p class="institution">Impartido por: edX</p>
+                    <a href="https://www.edx.org/" target="_blank">Ver certificado</a>
+                </div>
+                <div class="course-card">
+                    <h3>Certificación en Arquitectura de Software</h3>
+                    <p>Obtén conocimientos avanzados en patrones de diseño, principios SOLID y arquitectura empresarial.</p>
+                    <p class="institution">Impartido por: Pluralsight</p>
+                    <a href="https://www.pluralsight.com/" target="_blank">Ver certificado</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referencias -->
+        <section id="referencias">
+            <h2 class="section-title">Referencias</h2>
+            <div class="section-content">
+                <div class="reference-card">
+                    <img src="https://loremflickr.com/1200/800?random=1" alt="Foto de Persona 1">
+                    <h3>Persona 1</h3>
+                    <p class="reference-text">"Un profesional dedicado, siempre superando las expectativas."</p>
+                </div>
+                <div class="reference-card">
+                    <img src="https://loremflickr.com/1200/800?random=2" alt="Foto de Persona 2">
+                    <h3>Persona 2</h3>
+                    <p class="reference-text">"Su enfoque innovador hace que cada proyecto sea único."</p>
+                </div>
+                <div class="reference-card">
+                    <img src="https://loremflickr.com/1200/800?random=3" alt="Foto de Persona 3">
+                    <h3>Persona 3</h3>
+                    <p class="reference-text">"Excelente compañero de equipo y líder en el desarrollo."</p>
+                </div>
+                <div class="reference-card">
+                    <img src="https://loremflickr.com/1200/800?random=4" alt="Foto de Persona 4">
+                    <h3>Persona 4</h3>
+                    <p class="reference-text">"Capaz de enfrentar cualquier desafío con creatividad y precisión."</p>
+                </div>
+                <div class="reference-card">
+                    <img src="https://loremflickr.com/1200/800?random=5" alt="Foto de Persona 5">
+                    <h3>Persona 5</h3>
+                    <p class="reference-text">"Siempre mantiene altos estándares en cada proyecto."</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Contacto -->
+        <section id="contacto" class="content-section">
+            <h2 class="section-title">Contacto</h2>
+            <div class="section-content">
+                <form id="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="Index.js"></script>
+</body>
+</html>
