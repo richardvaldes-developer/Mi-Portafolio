@@ -11,14 +11,6 @@
 <body>
     <header>
         <nav>
-            <!--<ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#estudios-cursos">Cursos</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>-->
             <ul>
                 <li><button data-seccion="sobre-mi">Inicio</button></li>
                 <li><button data-seccion="proyectos">Proyectos</button></li>
@@ -140,7 +132,7 @@
             <h2 class="section-title">Contacto</h2>
             <div class="section-content">
                 <form id="contact-form">
-                    
+
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -189,37 +181,37 @@
         </div>
         <p>&copy; 2025 Richard Valdes Rosales // Analista Desarrollador</p>
     </footer>
-    <!--Correr script-->
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const botones = document.querySelectorAll("nav button");
-    const secciones = document.querySelectorAll(".seccion");
+        document.addEventListener("DOMContentLoaded", () => {
+            const botones = document.querySelectorAll("nav button");
+            const secciones = document.querySelectorAll(".seccion");
 
-    botones.forEach(boton => {
-        boton.addEventListener("click", () => {
-            const seccionId = boton.getAttribute("data-seccion");
+            botones.forEach(boton => {
+                boton.addEventListener("click", () => {
+                    const seccionId = boton.getAttribute("data-seccion");
 
-            secciones.forEach(seccion => {
-                // Ocultar sección actual con animación
-                seccion.classList.remove("visible");
-                setTimeout(() => {
-                    seccion.classList.remove("activa");
-                }, 300); // Espera que termine la animación antes de ocultarla
+                    secciones.forEach(seccion => {
+                        // Ocultar sección actual con animación
+                        seccion.classList.remove("visible");
+                        setTimeout(() => {
+                            seccion.classList.remove("activa");
+                        }, 300); // Espera que termine la animación antes de ocultarla
+                    });
+
+                    // Mostrar la nueva sección con animación
+                    setTimeout(() => {
+                        const nuevaSeccion = document.getElementById(seccionId);
+                        nuevaSeccion.classList.add("activa");
+                        setTimeout(() => {
+                            nuevaSeccion.classList.add("visible");
+                        }, 10); // Pequeño delay para activar la animación
+                    }, 300);
+                });
             });
-
-            // Mostrar la nueva sección con animación
-            setTimeout(() => {
-                const nuevaSeccion = document.getElementById(seccionId);
-                nuevaSeccion.classList.add("activa");
-                setTimeout(() => {
-                    nuevaSeccion.classList.add("visible");
-                }, 10); // Pequeño delay para activar la animación
-            }, 300);
         });
-    });
-});
 
 
 
