@@ -1,223 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Portfolio DevRichVal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><button data-seccion="sobre-mi">Inicio</button></li>
-                <li><button data-seccion="proyectos">Proyectos</button></li>
-                <li><button data-seccion="estudios-cursos">Cursos</button></li>
-                <li><button data-seccion="contacto">Contacto</button></li>
-            </ul>
+<body data-bs-theme="light">
+    <!-- Header y Navegación -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Dev<span class="text-primary">RichVal</span> <button id="theme-toggle" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-sun-fill" id="theme-icon"></i>
+                </button></a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Proyectos</a>
+                        </li>
+                        <li class="nav-item ms-2 mt-1">
+                            <a class="btn btn-primary btn-sm" href="#contact">Contáctame</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-
     </header>
 
-    <main>
-        <!-- Sobre mí -->
-        <section id="sobre-mi" class="content-section section-found seccion activa">
-            <div class="section-content">
-                <p>Con más de siete años de experiencia liderando y supervisando equipos en Abarrotes Económicos S.A.,
-                    he desarrollado una experticia en control de calidad y gestión eficiente. Mi labor ha sido
-                    fundamental para mantener los estándares de calidad y satisfacción del cliente, incluso en
-                    situaciones de alta presión.</p>
-                <p>Mi transición al campo tecnológico ha estado impulsada por mi pasión por la innovación y el
-                    aprendizaje continuo. Dominando lenguajes como C# y MySQL, busco aportar mis habilidades analíticas
-                    y mi enfoque en soluciones tecnológicas para enfrentar los retos del mercado actual.</p>
-            </div>
-            <div class="skills-section">
-                <h2>Mis Habilidades</h2>
-
-                <div class="skill">
-                    <span class="skill-name">HTML</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill html"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Hola, soy <span class="text-primary">Richard</span></h1>
+                    <p class="lead text-secondary mb-4">Desarrollador Junior especializado en crear soluciones web y de escritorio excepcionales</p>
+                    <div class="d-flex gap-2 mb-4">
+                        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                        <a href="#contact" class="btn btn-outline-secondary">Contacto</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="me-3 text-secondary">
+                            <i class="bi bi-github fs-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="me-3 text-secondary">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                        <a href="mailto:email@example.com" class="me-3 text-secondary">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                        </a>
+                        <a href="https://wa.me/56953785832" target="_blank" aria-label="Whatsapp" class=" text-secondary">
+                            <i class="bi bi-whatsapp fs-4"></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="skill">
-                    <span class="skill-name">CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill css"></div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <div class="profile-img-container">
+                        <img src="https://picsum.photos/1280" alt="Mi imagen" class="img-fluid rounded-circle profile-img">
                     </div>
-                </div>
-
-                <div class="skill">
-                    <span class="skill-name">JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill js"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">C#</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill js"></div>
-                    </div>
+                    
                 </div>
             </div>
-        </section>
-
-        <!-- Proyectos -->
-        <section id="proyectos" class="content-section seccion">
-            <div class="section-content">
-                <!-- Aquí se cargarán las cartas de los proyectos dinámicamente -->
-            </div>
-        </section>
-
-        <!-- Estudios y Cursos -->
-        <section id="estudios-cursos" class="content-section seccion">
-            <div class="section-content">
-                <div class="course-card">
-                    <h3>API REST con PHP y MYSQL</h3>
-                    <p>Crea una api rest con php y usando el motor de base de datos mysql</p>
-                    <p class="institution">Impartido por: Udemy (Ubaldo Acosta)</p>
-                    <a href="https://www.udemy.com/course/api-rest-con-php-y-mysql/?couponCode=24T5MT071025"
-                        target="_blank">Ver Curso</a>
-                </div>
-                <div class="course-card">
-                    <h3>Universidad Desarrollo Web - FrontEnd Web Developer!</h3>
-                    <p>El mejor curso para aprender a crear aplicaciones Web Modernas con HTML, CSS y JavaScript. Serás
-                        un FrontEnd Developer!</p>
-                    <p class="institution">Impartido por: Udemy (Ubaldo Acosta)</p>
-                    <a href="https://www.udemy.com/share/104fMI3@WvPhPsgFNZOqGxzxPFCWFEFfoxKQw8rGdhJmsOq-vAOmXy20585LZ0s-LxAx5VVnCQ==/"
-                        target="_blank">Ver Curso</a>
-                </div>
-                <div class="course-card">
-                    <h3>Universidad Java - Cero a Experto - Actualizado (+150 hrs)</h3>
-                    <p>El mejor curso Java con aplicaciones del mundo real (Escritorio, Web y Full Stack) Spring,
-                        Hibernate, Jakarta EE y más!</p>
-                    <p class="institution">Impartido por: Udemy (Ubaldo Acosta)</p>
-                    <a href="https://www.udemy.com/share/101WEY3@YzhZAjDL7Zgbxqv-2U6E_Zk8Jt7kMK_4U3z6lWevySPc56hY8CmzEhuHMShuhpr30w==/"
-                        target="_blank">Ver Curso</a>
-                </div>
-                <div class="course-card">
-                    <h3>Python sin fronteras: HTML, CSS, Flask y MySQL</h3>
-                    <p>Conviértete en un experto en Python con este curso que te enseña a programar desde cero</p>
-                    <p class="institution">Impartido por: Udemy (Nicolas Schurmann)</p>
-                    <a href="https://www.udemy.com/share/103zjw3@U31EpZKcJazKICi8YycaHrmCoIeze5xxAkkQTsy0hRLPsuBWHA0bf-9cP8mBqUbEAg==/"
-                        target="_blank">Ver Curso</a>
-                </div>
-                <div class="course-card">
-                    <h3>Hacking ético [Como se Usan los Malware ,Virus, Troyanos?]</h3>
-                    <p>Conoce el oscuro mundo del hacking desde cero hasta ser un pro en el uso de estas tools</p>
-                    <p class="institution">Impartido por: Udemy (lubutech dev)</p>
-                    <a href="https://www.udemy.com/share/10bMNT3@53cMSkO7dYgoza2u9ZqWsTaiub6Hv0y2lTnKx9cFDwNIZpBmid0HJcC0I4KpARM2DA==/"
-                        target="_blank">Ver Curso</a>
-                </div>
-                <div class="course-card">
-                    <h3>Universidad Excel - Básico, Intermedio y Avanzado!</h3>
-                    <p>Master en Excel más completo. Incluye Funciones, Tablas Dinámicas, Gráficos, Power Query , Macros
-                        y más a profundidad!</p>
-                    <p class="institution">Impartido por: Udemy (Ubaldo Acosta)</p>
-                    <a href="https://www.udemy.com/share/103uLw3@k9tho5sQ7j_boUZwPYv-NRL8ffWTnEvi30w6zJAnYzmCho0gQTUV30Ge7gx01AsESw==/"
-                        target="_blank">Ver Curso</a>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-        <!-- Contacto -->
-        <section id="contacto" class="content-section section-found seccion">
-            <h2 class="section-title">Contacto</h2>
-            <div class="section-content">
-                <form id="contact-form">
-
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-
-
-    <footer>
-        <div class="social-icons">
-            <a href="https://github.com/richardvaldes-developer" target="_blank" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 .5C5.36.5 0 5.86 0 12.5c0 5.3 3.44 9.79 8.2 11.38.6.1.8-.25.8-.55 0-.27-.01-1-.02-1.95-3.34.72-4.05-1.61-4.05-1.61-.54-1.39-1.33-1.75-1.33-1.75-1.08-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.06 1.84 2.8 1.31 3.48 1 .1-.77.42-1.31.76-1.61-2.67-.3-5.48-1.34-5.48-5.96 0-1.32.47-2.4 1.24-3.24-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.44 11.44 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.78.84 1.24 1.92 1.24 3.24 0 4.63-2.81 5.65-5.49 5.96.43.37.81 1.1.81 2.22 0 1.61-.01 2.92-.01 3.32 0 .3.2.66.81.55C20.56 22.29 24 17.8 24 12.5 24 5.86 18.64.5 12 .5z" />
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/richard-valdes-77116225b/" target="_blank" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M20.45 2H3.55A1.55 1.55 0 002 3.55v16.9A1.55 1.55 0 003.55 22h16.9A1.55 1.55 0 0022 20.45V3.55A1.55 1.55 0 0020.45 2zM8.06 19.5H5.5v-8.5h2.56zm-1.28-9.71a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12.22 9.71h-2.56v-4.27c0-1.02-.02-2.33-1.42-2.33s-1.64 1.11-1.64 2.26v4.34H10.5v-8.5h2.46v1.16h.04a2.7 2.7 0 012.42-1.33c2.58 0 3.05 1.7 3.05 3.92v4.75z" />
-                </svg>
-            </a>
-            <a href="https://wa.me/56953785832" target="_blank" aria-label="Whatsapp">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,255.99623,255.99623">
-                    <g fill="#fafafa" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
-                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                        style="mix-blend-mode: normal">
-                        <g transform="scale(8,8)">
-                            <path
-                                d="M24.50391,7.50391c-2.25781,-2.25781 -5.25781,-3.50391 -8.45312,-3.50391c-6.58594,0 -11.94922,5.35938 -11.94922,11.94531c-0.00391,2.10547 0.54688,4.16016 1.59375,5.97266l-1.69531,6.19141l6.33594,-1.66406c1.74219,0.95313 3.71094,1.45313 5.71094,1.45703h0.00391c6.58594,0 11.94531,-5.35937 11.94922,-11.94922c0,-3.19141 -1.24219,-6.19141 -3.49609,-8.44922zM16.05078,25.88281h-0.00391c-1.78125,0 -3.53125,-0.48047 -5.05469,-1.38281l-0.36328,-0.21484l-3.76172,0.98438l1.00391,-3.66406l-0.23437,-0.375c-0.99609,-1.58203 -1.51953,-3.41016 -1.51953,-5.28516c0,-5.47266 4.45703,-9.92578 9.9375,-9.92578c2.65234,0 5.14453,1.03516 7.01953,2.91016c1.875,1.87891 2.90625,4.37109 2.90625,7.02344c0,5.47656 -4.45703,9.92969 -9.92969,9.92969zM21.49609,18.44531c-0.29687,-0.14844 -1.76562,-0.87109 -2.03906,-0.96875c-0.27344,-0.10156 -0.47266,-0.14844 -0.67187,0.14844c-0.19922,0.30078 -0.76953,0.97266 -0.94531,1.17188c-0.17187,0.19531 -0.34766,0.22266 -0.64453,0.07422c-0.30078,-0.14844 -1.26172,-0.46484 -2.40234,-1.48437c-0.88672,-0.78906 -1.48828,-1.76953 -1.66016,-2.06641c-0.17578,-0.30078 -0.01953,-0.46094 0.12891,-0.60937c0.13672,-0.13281 0.30078,-0.34766 0.44922,-0.52344c0.14844,-0.17187 0.19922,-0.29687 0.30078,-0.49609c0.09766,-0.19922 0.04688,-0.375 -0.02734,-0.52344c-0.07422,-0.14844 -0.67187,-1.62109 -0.92187,-2.21875c-0.24219,-0.58203 -0.48828,-0.5 -0.67187,-0.51172c-0.17187,-0.00781 -0.37109,-0.00781 -0.57031,-0.00781c-0.19922,0 -0.52344,0.07422 -0.79687,0.375c-0.27344,0.29688 -1.04297,1.01953 -1.04297,2.48828c0,1.46875 1.07031,2.89063 1.21875,3.08984c0.14844,0.19531 2.10547,3.21094 5.10156,4.50391c0.71094,0.30859 1.26563,0.49219 1.69922,0.62891c0.71484,0.22656 1.36719,0.19531 1.88281,0.12109c0.57422,-0.08594 1.76563,-0.72266 2.01563,-1.42187c0.24609,-0.69531 0.24609,-1.29297 0.17188,-1.41797c-0.07422,-0.125 -0.27344,-0.19922 -0.57422,-0.35156z">
-                            </path>
-                        </g>
-                    </g>
-                </svg>
-            </a>
         </div>
-        <p>&copy; 2025 Richard Valdes Rosales // Analista Desarrollador</p>
+    </section>
+    
+
+    <!-- Sección sobre mí -->
+    <section id="about" class="py-5">
+        <div class="container">
+            
+            <h2 class="text-center mb-5">Sobre mí</h2>
+            
+            <div class="row">
+                <!-- Sobre mí-->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <p class="lead">
+                        Soy un desarrollador apasionado con experiencia en la creación de aplicaciones web y de escritorio modernas y responsivas. 
+                        Me especializo en frontend: JavaScript, HTML/CSS || desarrollo Backend .NET , JAVA y disfruto resolviendo problemas complejos con soluciones elegantes.
+                    </p>
+                    <p>
+                        Con 2 años de experiencia en el desarrollo web y aplicaciones de escritorio en .NET .
+                    </p>
+                    <p>
+                        Cuando no estoy programando, voy al gimnasio, toco guitarra
+                    </p> 
+                </div>
+                <!-- Experiencia -->
+                <div class="col-lg-6">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Experiencia</h3>
+                            <div class="mb-4">
+                                <h4 class="h5">Desarrollador Web | Austral Arcadia Project</h4>
+                                <p class="text-muted ms-4">2025 - Presente</p>
+                                <p class="ms-4">Desarrollo de aplicaciones web utilizando JavaScript, HTML/CSS y frameworks modernos.</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h5">Chofer y Bodeguero | Sweet And Gourmet Villarrica</h4>
+                                <p class="text-muted ms-4">2022 - Presente</p>
+                                <p class="ms-4">• Abastecimiento de insumos basicos de restaurant-pasteleria</p>
+                                <p class="ms-4">• Despachos de productos alimenticios entre Valdivia,Temuco,Villarrica,Pucon,Lican Ray</p>
+                            </div>
+                            <div>
+                                <h4 class="h5">Jefe de Sala | SuperBodega Acuenta Villarrica</h4>
+                                <p class="text-muted ms-4">2014 - 2021</p>
+                                <p class="ms-4">• Jefe Encargado de distintas áreas, supervisar y capacitar personal de sala,
+                                    seguimiento estándares de calidad y satisfacción al cliente, capacidad para trabajar
+                                    bajo presión y resolver problemas de manera eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Habilidades</h2>
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="skills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend" type="button">Frontend</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend" type="button">Backend</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools" type="button">Herramientas</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="skills-tabContent">
+                <div class="tab-pane fade show active" id="frontend" role="tabpanel">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center">
+                        <span class="badge bg-primary p-2 m-1">HTML5</span>
+                        <span class="badge bg-primary p-2 m-1">CSS3</span>
+                        <span class="badge bg-primary p-2 m-1">JavaScript</span>
+                        <span class="badge bg-primary p-2 m-1">Bootstrap</span>
+                        <span class="badge bg-primary p-2 m-1">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="backend" role="tabpanel">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center">
+                        <span class="badge bg-primary p-2 m-1">.Net</span>
+                        <span class="badge bg-primary p-2 m-1">WebApi</span>
+                        <span class="badge bg-primary p-2 m-1">MySQL</span>
+                        <span class="badge bg-primary p-2 m-1">SQLServer</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tools" role="tabpanel">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center">
+                        <span class="badge bg-primary p-2 m-1">Git</span>
+                        <span class="badge bg-primary p-2 m-1">GitHub</span>
+                        <span class="badge bg-primary p-2 m-1">VS Code</span>
+                        <span class="badge bg-primary p-2 m-1">Visual Studio 2022</span>
+                        <span class="badge bg-primary p-2 m-1">Figma</span>
+                        <span class="badge bg-primary p-2 m-1">Lt Browser</span>
+                        <span class="badge bg-primary p-2 m-1">Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Proyectos</h2>
+            
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card">
+                        <img src="enproceso.png" class="card-img-top" alt="Project screenshot">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mi Portafolio en .NET</h5>
+                                <div>
+                                    <a href="https://github.com/richardvaldes-developer/Mi-Portafolio-.NET" target="_blank" class="text-secondary me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="card-text">Portafolio en proceso.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary me-1">C#</span>
+                                <span class="badge bg-light text-primary me-1">HTML</span>
+                                <span class="badge bg-light text-primary me-1">CSS</span>
+                                <span class="badge bg-light text-primary">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card">
+                        <img src="enproceso.png" class="card-img-top" alt="Project screenshot">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Bodega Online</h5>
+                                <div>
+                                    <a href="https://github.com/richardvaldes-developer/Bodega-Online" target="_blank" class="text-secondary me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="card-text">************</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary me-1">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card">
+                        <img src="enproceso.png" class="card-img-top" alt="Project screenshot">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Registro Requerimientos</h5>
+                                <div>
+                                    <a href="https://github.com/richardvaldes-developer/registro-requerimientos" target="_blank" class="text-secondary me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="card-text">requerimientos para un sistema, alta, media,baja prioridad</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary me-1">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card">
+                        <img src="enproceso.png" class="card-img-top" alt="Project screenshot">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Sistem Inventario Web</h5>
+                                <div>
+                                    <a href="https://github.com/richardvaldes-developer/Sistema-de-Inventario-Web" target="_blank" class="text-secondary me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="card-text">**********</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary me-1">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card">
+                        <img src="portafolioweb.png" class="card-img-top" alt="Project screenshot">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">Mi Portafolio web</h5>
+                                <div>
+                                    <a href="https://github.com/richardvaldes-developer/Mi-Portafolio" target="_blank" class="text-secondary me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="card-text">Sitio web de portafolio personal para mostrar proyectos y habilidades (este sitio).</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary me-1">HTML</span>
+                                <span class="badge bg-light text-primary me-1">CSS</span>
+                                <span class="badge bg-light text-primary">JavaScript</span>
+                                <span class="badge bg-light text-primary">Bootstrap 5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="contact-form">
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label for="name" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Asunto del mensaje" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h3 class="h4 mb-3">Información de contacto</h3>
+                        <p class="text-muted">
+                            Estoy disponible para proyectos freelance, oportunidades de trabajo a tiempo completo o simplemente para charlar sobre tecnología.
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope-fill text-primary me-3 fs-5"></i>
+                            <a href="mailto:richard.valdesrosales@outlook.cl" class="text-decoration-none">richard.valdesrosales@outlook.cl</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-github text-primary me-3 fs-5"></i>
+                            <a href="https://github.com/richardvaldes-developer" target="_blank" class="text-decoration-none">github.com/richardvaldes-developer</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-linkedin text-primary me-3 fs-5"></i>
+                            <a href="https://www.linkedin.com/in/richard-valdes-77116225b/" target="_blank" class="text-decoration-none">linkedin.com/in/richard-valdes-77116225b</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-whatsapp text-primary me-3 fs-5"></i>
+                            <a href="https://wa.me/56953785832" target="_blank" aria-label="Whatsapp" class="text-decoration-none">WhatsApp +569 53785832</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 DevRichVal. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline text-center text-md-end mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/richardvaldes-developer" target="_blank" class="text-secondary">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="https://www.linkedin.com/in/richard-valdes-77116225b/" target="_blank" class="text-secondary">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="mailto:richard.valdesrosales@outlook.cl" class="text-secondary">
+                                <i class="bi bi-envelope-fill"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="https://wa.me/56953785832" target="_blank" aria-label="Whatsapp" class="text-secondary">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="module" src="js/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const botones = document.querySelectorAll("nav button");
-            const secciones = document.querySelectorAll(".seccion");
-
-            botones.forEach(boton => {
-                boton.addEventListener("click", () => {
-                    const seccionId = boton.getAttribute("data-seccion");
-
-                    secciones.forEach(seccion => {
-                        // Ocultar sección actual con animación
-                        seccion.classList.remove("visible");
-                        setTimeout(() => {
-                            seccion.classList.remove("activa");
-                        }, 300); // Espera que termine la animación antes de ocultarla
-                    });
-
-                    // Mostrar la nueva sección con animación
-                    setTimeout(() => {
-                        const nuevaSeccion = document.getElementById(seccionId);
-                        nuevaSeccion.classList.add("activa");
-                        setTimeout(() => {
-                            nuevaSeccion.classList.add("visible");
-                        }, 10); // Pequeño delay para activar la animación
-                    }, 300);
-                });
-            });
-        });
-
-
-
-    </script>
-
-
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
 </body>
-
 </html>
