@@ -59,32 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-
-            if (!name || !email || !subject || !message) {
-                alert('Por favor completa todos los campos');
-                return;
-            }
-            
-
-            alert('¡Gracias por tu mensaje! Te responderé pronto.');
-            
-
-            contactForm.reset();
-        });
-    }
     
 
     const sections = document.querySelectorAll('section[id]');
@@ -114,3 +88,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
