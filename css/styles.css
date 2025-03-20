@@ -11,6 +11,7 @@ body {
 
 /* Dark Mode Styles */
 [data-bs-theme="dark"] {
+    color: #adb5bd;
     --bs-body-color: #e6e6e6;
     --bs-body-bg: #121212;
     --bs-primary: #6ea8fe;
